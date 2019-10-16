@@ -4,7 +4,7 @@ class CartsController < ApplicationController
   end
 
   def error
-    render "error"
+    render "emptyCartMsg"
   end
 
   def add_item
