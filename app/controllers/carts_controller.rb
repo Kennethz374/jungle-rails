@@ -5,7 +5,7 @@ class CartsController < ApplicationController
 
   def error
     render "emptyCartMsg"
-  end
+  end 
 
   def add_item
     product_id = params[:product_id].to_s
