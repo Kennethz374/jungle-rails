@@ -1,2 +1,20 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>DashBoard</h1>
+<div class = "order-summary jumbotron">
+    <h3>Total individual products: <%=  @product %> </h3>
+    <be>
+    <h3>Total categories: <%= @category %> </h3>
+</div>
+<a href= "admin/products"> <button type="button" class="btn btn-success">Back to admin product list</button></a>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-success">Back to Categories</button>
+  <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href= "categories/1">Apparels</a></li>
+    <li><a href= "categories/2">Electronics</a></li>
+    <li><a href= "categories/3">Furniture</a></li>
+  </ul>
+</div>
+
