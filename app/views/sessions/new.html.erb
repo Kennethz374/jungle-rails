@@ -1,9 +1,17 @@
-<h1>Login</h1>
+<h1>Member Login</h1>
 
 <%= form_tag '/login' do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
+  Email:
+    <br>
+  <i class="glyphicon glyphicon-user"></i>
+    <%= text_field_tag :email %>
+      <br>
+  Password: 
+    <br>
+      <i class="glyphicon glyphicon-lock"></i>
+    <%= password_field_tag :password %>
+      <br>
   <%= submit_tag "Submit" %>
 
 <% end %>
