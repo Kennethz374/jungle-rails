@@ -8,6 +8,11 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to be_present
     end
 
+    it 'should have error "Password has to be minimum length >3" if password is shorter than 2 letter' do
+      @user = User.create(name:"Kennnnn", email: "123@123", password: "12", password_confirmation: "12")
+      expect(@user.errors.full_messages).to be_present
+    end
+
     it 'should have error "name can not be blank" if name is nil' do
       @user = User.create(name:nil, email: "123@123", password: "sdfasdfas", password_confirmation: "12312312")
       expect(@user.name).not_to be_present
