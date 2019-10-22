@@ -26,6 +26,12 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to be_present
     end
 
+    it 'should have error if email is not unique' do
+      @user = User.create(name:"kkkkkkk", email: "123123@gmail.com", password: "sdfasdfas", password_confirmation: "sdfasdfas")
+      @user1 = User.create(name:"kkkkkkk", email: "123123@gmail.com", password: "sdfasdfas", password_confirmation: "sdfasdfas")
+      expect(@user1.errors.full_messages).to be_present
+    end
+
   end
 
   describe '.authenticate_with_credentials' do
